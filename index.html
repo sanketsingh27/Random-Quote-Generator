@@ -8,14 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section>
-        <div id="quote"></div>
-        <div id="char"></div>
-    </section>
-    <button id="nxt-btn">Get A New Quote</button>
-    <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+    <div id="container">
+        <section>
+            <div id="quote">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur voluptatum nemo cumque veritatis distinctio accusantium assumenda qui obcaecati mollitia.</div>
+            <div id="char">Sanket</div>
+        </section>
     
+        <button id="nxt-btn">Get A New Quote</button>
+        <button id="tweet"> 
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet Me UP!</a>
+        </button>        
+    </div>
+    
+    <!-- BELOW THIS LINE SCRIPT ARE CALLED -->
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    
     <script src="script.js"></script>        
 </body>
 </html>
