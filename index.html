@@ -5,66 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>RAndom Quote Machain</title>
-    <style>
-    
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
    <div id="quote"></div>
    <button id="nxt-btn">Get A New Quote</button>
-
-    <script>
-        //  const  URL = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
-        
-        // fetch(url)
-        // .then(response => response.json())
-        // .then(data => console.log(data)) 
-
-        const  URL = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
-        
-        window.onload = loadQuote();
-        
-        function loadQuote(){
-        
-        const linkdata = new XMLHttpRequest();
-        
-        linkdata.open('GET',URL,true);
-        
-        linkdata.onload= function(){
-            if (linkdata.status === 200){
-                let quoteData = JSON.parse(linkdata.responseText);
-                document.getElementById('quote').innerHTML = quoteData[0].content;
-                console.log(quoteData[0].content);
-            }
-        }
-
-        linkdata.send()
-        }
-        
-      
-    //   document.getElementById('nxt-btn').addEventListener('click',loadQuote);
-        document.getElementById('nxt-btn').addEventListener('click',loadData);
-        
-        function loadData(){
-            document.getElementById('quote').innerHTML = '';
-            
-            const XHR = new XMLHttpRequest();
-
-            XHR.open('GET','http://ron-swanson-quotes.herokuapp.com/v2/quotes',true);
-
-            XHR.onload = function(){
-                if(XHR.status == 200){
-                    var data = JSON.parse(XHR.responseText);
-                    let quote = data[0];
-                    
-                    console.log(quote);
-                    document.getElementById('quote').innerHTML = quote;
-                }    
-            }
-
-            XHR.send();
-        }        
-    </script>
+    <script src="script.js"></script>        
 </body>
 </html>
