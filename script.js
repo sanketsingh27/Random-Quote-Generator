@@ -2,12 +2,13 @@
         window.onload = loadQuote();
         
         function loadQuote(){
-            document.getElementById('quote').innerHTML =''
+            document.getElementsByTagName('section').innerHTML =''
             fetch(URL)
             .then(res => res.json())
             .then((data)=>{
                 console.log(data)
-                document.getElementById('quote').innerHTML = data.quote;    
+                document.getElementById('quote').innerHTML = data.quote;
+                document.getElementById('char').innerHTML = data.character;    
             })
         }
         
